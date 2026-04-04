@@ -1,14 +1,28 @@
 :root {
-    --primary-color: #055a05;
+    --primary-color: #b1c4b1;
     /* forest green */
-    --secondary-color: #075d5e;
-    /*warm sand */
     --accent1-color: #264653;
-    /*dark slate */
-    --accent2-color: #ecbd46;
-    /* light golden yellow */
+    /*dark slate blue*/
+    --accent2-color: #e9c46a;
+
+    /*light golden yellow */
     --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    --body-font: "poppins, sans-serif";
+}
+
+header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    width: 80%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
 }
 
 * {
@@ -19,7 +33,7 @@
 
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--accent1-color)
 }
 
 header,
@@ -32,7 +46,19 @@ footer {
 h1,
 h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color)
+    color: var(--primary-color);
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-content img {
+    width: 200px;
+    height: auto;
 }
 
 nav,
@@ -43,8 +69,32 @@ article {
     padding: 8px;
 }
 
+article {
+    position: absolute;
+    top: 150px;
+    background-color: #afa17d;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 8px;
+}
+
 .socialmedia a {
     text-decoration: none;
+}
+
+.socialmedia a img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
 }
 
 .hero {
@@ -55,41 +105,126 @@ article {
     display: block;
     width: 100%;
     height: auto;
+
 }
 
-h1 {
+.hero h1 {
     position: absolute;
+    font-size: 2em;
     top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
-}
-
-h2 {
-    bottom: 30px;
+    left: 0px;
+    right: 20px;
+    margin: 0;
     width: 100%;
     padding: 10px;
     text-align: center;
     opacity: 0.7;
-    background-color: var(--secondary-color);
-    color: #fff;
+    background-color: #998248;
+    color: black;
 }
 
 .hero article {
     position: absolute;
-    bottom: 30px;
-    width: 90%;
-    padding: 10px;
-    text-align: center;
-    opacity: 0.8;
-    background-color: var(--accent2-color);
-    color: #050505;
+
 }
 
 .hero article img {
     float: right;
-    width: 125px;
+    width: 200px;
+    border: 5px solid var(--accent2-color);
+    border-radius: 50%;
+    margin-left: 10px;
+
+}
+
+.adventure-gallery {
+    display: flex;
+    /* puts figures in a horizontal row */
+    justify-content: center;
+    /* even space between images */
+    align-items: stretch;
+    /* aligns all figures at top */
+    gap: 8px;
+    /* optional spacing betteen images */
+    /*spacing between images*/
+    padding: 20px 0;
+    flex-wrap: wrap;
+    /*wraps to next line on smaller screens */
+}
+
+/* make sure the figures don't take full width */
+.adventure-gallery figure {
+    flex: 0 0 auto;
+    /* don't stretch, use natural size */
+    /* equal space for each figure */
+    text-align: center;
+}
+
+/* All adventure images - uniform size */
+.adventure-gallery img.adventure-img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Captions under each image */
+.adventure-gallery figcaption {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+}
+
+nav a {
+
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+.logo {
+    width: 100px;
+    height: auto
+}
+
+.contact-info iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.employees {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.employees figure {
+    text-align: center;
+    max-width: 200px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form button {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #005fa3;
 }
