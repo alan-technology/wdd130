@@ -74,10 +74,10 @@ article {
     position: relative;
     /* ya no absolute */
     top: 0;
-    background-color: #8a7a55;
-    /* fondo más oscuro para contraste */
+    background-color: #5a4a2f;
+    /* marrón más oscuro */
     color: white;
-    /* contraste 7+:1 */
+    /* contraste > 5:1 */
 }
 
 footer {
