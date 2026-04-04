@@ -1,28 +1,12 @@
 :root {
     --primary-color: #b1c4b1;
-    /* forest green */
+    /* verde claro */
     --accent1-color: #264653;
-    /*dark slate blue*/
+    /* slate blue */
     --accent2-color: #e9c46a;
-
-    /*light golden yellow */
+    /* dorado */
     --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: "poppins, sans-serif";
-}
-
-header {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    align-items: center;
-    padding: 10px;
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-    width: 80%;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
+    --body-font: "Poppins", sans-serif;
 }
 
 * {
@@ -33,7 +17,7 @@ nav {
 
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color)
+    color: var(--accent1-color);
 }
 
 header,
@@ -43,10 +27,27 @@ footer {
     margin: 0 auto;
 }
 
+header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    /* contraste mejorado */
+    width: 80%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
 h1,
 h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--accent1-color);
+    /* contraste mejorado sobre blanco */
 }
 
 .history-content {
@@ -70,9 +71,13 @@ article {
 }
 
 article {
-    position: absolute;
-    top: 150px;
-    background-color: #afa17d;
+    position: relative;
+    /* ya no absolute */
+    top: 0;
+    background-color: #8a7a55;
+    /* fondo más oscuro para contraste */
+    color: var(--accent2-color);
+    /* dorado sobre marrón oscuro */
 }
 
 footer {
@@ -105,7 +110,6 @@ footer {
     display: block;
     width: 100%;
     height: auto;
-
 }
 
 .hero h1 {
@@ -125,7 +129,6 @@ footer {
 
 .hero article {
     position: absolute;
-
 }
 
 .hero article img {
@@ -134,33 +137,22 @@ footer {
     border: 5px solid var(--accent2-color);
     border-radius: 50%;
     margin-left: 10px;
-
 }
 
 .adventure-gallery {
     display: flex;
-    /* puts figures in a horizontal row */
     justify-content: center;
-    /* even space between images */
     align-items: stretch;
-    /* aligns all figures at top */
     gap: 8px;
-    /* optional spacing betteen images */
-    /*spacing between images*/
     padding: 20px 0;
     flex-wrap: wrap;
-    /*wraps to next line on smaller screens */
 }
 
-/* make sure the figures don't take full width */
 .adventure-gallery figure {
     flex: 0 0 auto;
-    /* don't stretch, use natural size */
-    /* equal space for each figure */
     text-align: center;
 }
 
-/* All adventure images - uniform size */
 .adventure-gallery img.adventure-img {
     width: 90px;
     height: 60px;
@@ -168,7 +160,6 @@ footer {
     border-radius: 6px;
 }
 
-/* Captions under each image */
 .adventure-gallery figcaption {
     margin-top: 6px;
     font-size: 14px;
@@ -182,16 +173,15 @@ nav img {
 }
 
 nav a {
-
     text-decoration: none;
-    color: black;
+    color: var(--accent1-color);
+    /* consistencia */
     font-weight: bold;
-
 }
 
 .logo {
     width: 100px;
-    height: auto
+    height: auto;
 }
 
 .contact-info iframe {
