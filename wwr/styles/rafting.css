@@ -76,8 +76,8 @@ article {
     top: 0;
     background-color: #8a7a55;
     /* fondo más oscuro para contraste */
-    color: var(--accent2-color);
-    /* dorado sobre marrón oscuro */
+    color: white;
+    /* contraste 7+:1 */
 }
 
 footer {
