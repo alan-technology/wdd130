@@ -28,10 +28,6 @@ header {
 
 }
 
-.navigation a {
-    white-space: nowrap;
-}
-
 .navigation li {
     flex: 1 1 auto;
 }
@@ -44,6 +40,7 @@ header {
     text-decoration: none;
     text-align: center;
     font-size: 17px;
+    white-space: nowrap;
 }
 
 .navigation a:hover {
@@ -356,6 +353,7 @@ iframe {
     flex-direction: column;
     gap: 15px;
     max-width: 500px;
+    text-align: left;
 
 }
 
@@ -378,10 +376,6 @@ iframe {
 
 .contact-form input[type="radio"] {
     margin-right: 8px;
-}
-
-.contact-form form {
-    text-align: left;
 }
 
 .checkbox-label {
